@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/my_nav_pantograph_chet"
+    app:startDestination="@id/listPantographFragmentChet">
+
+    <fragment
+        android:id="@+id/listPantographFragmentChet"
+        android:name="com.mikhail_R_gps_tracker.gpsassistant.fragments.chet.pantograph.list.ListPantographFragmentChet"
+        android:label="fragment_list_pantograph_chet"
+        tools:layout="@layout/fragment_list_pantograph_chet" >
+        <action
+            android:id="@+id/action_listPantographFragmentChet_to_addPantographFragmentChet"
+            app:destination="@id/addPantographFragmentChet" />
+        <action
+            android:id="@+id/action_listPantographFragmentChet_to_updatePantographFragmentChet"
+            app:destination="@id/updatePantographFragmentChet" />
+    </fragment>
+    <fragment
+        android:id="@+id/addPantographFragmentChet"
+        android:name="com.mikhail_R_gps_tracker.gpsassistant.fragments.chet.pantograph.add.AddPantographFragmentChet"
+        android:label="fragment_add_pantograph_chet"
+        tools:layout="@layout/fragment_add_pantograph_chet" >
+        <action
+            android:id="@+id/action_addPantographFragmentChet_to_listPantographFragmentChet"
+            app:destination="@id/listPantographFragmentChet" />
+    </fragment>
+    <fragment
+        android:id="@+id/updatePantographFragmentChet"
+        android:name="com.mikhail_R_gps_tracker.gpsassistant.fragments.chet.pantograph.update.UpdatePantographFragmentChet"
+        android:label="fragment_update_pantograph_chet"
+        tools:layout="@layout/fragment_update_pantograph_chet" >
+        <action
+            android:id="@+id/action_updatePantographFragmentChet_to_listPantographFragmentChet"
+            app:destination="@id/listPantographFragmentChet" />
+        <argument
+            android:name="item_pantograph_chet"
+            app:argType="com.mikhail_R_gps_tracker.gpsassistant.db.pantograph.ListItemPantographChet" />
+    </fragment>
+</navigation>

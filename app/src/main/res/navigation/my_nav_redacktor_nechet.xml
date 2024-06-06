@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/my_nav_redacktor_nechet"
+    app:startDestination="@id/listRedacktorFragmentNechet">
+
+    <fragment
+        android:id="@+id/listRedacktorFragmentNechet"
+        android:name="com.mikhail_R_gps_tracker.gpsassistant.fragments.nechet.redacktor.list.ListRedacktorFragmentNechet"
+        android:label="fragment_list_redacktor_nechet"
+        tools:layout="@layout/fragment_list_redacktor_nechet" >
+        <action
+            android:id="@+id/action_listRedacktorFragmentNechet_to_addRedacktorFragmentNechet"
+            app:destination="@id/addRedacktorFragmentNechet" />
+        <action
+            android:id="@+id/action_listRedacktorFragmentNechet_to_updateRedacktorFragmentNechet"
+            app:destination="@id/updateRedacktorFragmentNechet" />
+    </fragment>
+    <fragment
+        android:id="@+id/addRedacktorFragmentNechet"
+        android:name="com.mikhail_R_gps_tracker.gpsassistant.fragments.nechet.redacktor.add.AddRedacktorFragmentNechet"
+        android:label="fragment_add_redacktor_nechet"
+        tools:layout="@layout/fragment_add_redacktor_nechet" >
+        <action
+            android:id="@+id/action_addRedacktorFragmentNechet_to_listRedacktorFragmentNechet"
+            app:destination="@id/listRedacktorFragmentNechet" />
+    </fragment>
+    <fragment
+        android:id="@+id/updateRedacktorFragmentNechet"
+        android:name="com.mikhail_R_gps_tracker.gpsassistant.fragments.nechet.redacktor.update.UpdateRedacktorFragmentNechet"
+        android:label="fragment_update_redacktor_nechet"
+        tools:layout="@layout/fragment_update_redacktor_nechet" >
+        <action
+            android:id="@+id/action_updateRedacktorFragmentNechet_to_listRedacktorFragmentNechet"
+            app:destination="@id/listRedacktorFragmentNechet" />
+        <argument
+            android:name="item_redacktor_nechet"
+            app:argType="com.mikhail_R_gps_tracker.gpsassistant.db.redacktor.ListItemRedacktorNechet" />
+    </fragment>
+</navigation>

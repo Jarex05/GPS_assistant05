@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/my_nav_brake_chet"
+    app:startDestination="@id/listBrakeFragmentChet">
+
+    <fragment
+        android:id="@+id/listBrakeFragmentChet"
+        android:name="com.mikhail_R_gps_tracker.gpsassistant.fragments.chet.brake.list.ListBrakeFragmentChet"
+        android:label="fragment_list_brake_chet"
+        tools:layout="@layout/fragment_list_brake_chet" >
+        <action
+            android:id="@+id/action_listBrakeFragmentChet_to_addBrakeFragmentChet"
+            app:destination="@id/addBrakeFragmentChet" />
+        <action
+            android:id="@+id/action_listBrakeFragmentChet_to_updateBrakeFragmentChet"
+            app:destination="@id/updateBrakeFragmentChet" />
+    </fragment>
+    <fragment
+        android:id="@+id/addBrakeFragmentChet"
+        android:name="com.mikhail_R_gps_tracker.gpsassistant.fragments.chet.brake.add.AddBrakeFragmentChet"
+        android:label="fragment_add_brake_chet"
+        tools:layout="@layout/fragment_add_brake_chet" >
+        <action
+            android:id="@+id/action_addBrakeFragmentChet_to_listBrakeFragmentChet"
+            app:destination="@id/listBrakeFragmentChet" />
+    </fragment>
+    <fragment
+        android:id="@+id/updateBrakeFragmentChet"
+        android:name="com.mikhail_R_gps_tracker.gpsassistant.fragments.chet.brake.update.UpdateBrakeFragmentChet"
+        android:label="fragment_update_brake_chet"
+        tools:layout="@layout/fragment_update_brake_chet" >
+        <action
+            android:id="@+id/action_updateBrakeFragmentChet_to_listBrakeFragmentChet"
+            app:destination="@id/listBrakeFragmentChet" />
+        <argument
+            android:name="item_brake_chet"
+            app:argType="com.mikhail_R_gps_tracker.gpsassistant.db.brake.ListItemBrakeChet" />
+    </fragment>
+</navigation>

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/my_nav_redacktor_chet"
+    app:startDestination="@id/listRedacktorFragmentChet">
+
+    <fragment
+        android:id="@+id/listRedacktorFragmentChet"
+        android:name="com.mikhail_R_gps_tracker.gpsassistant.fragments.chet.redacktor.list.ListRedacktorFragmentChet"
+        android:label="fragment_list_redacktor_chet"
+        tools:layout="@layout/fragment_list_redacktor_chet" >
+        <action
+            android:id="@+id/action_listRedacktorFragmentChet_to_addRedacktorFragmentChet"
+            app:destination="@id/addRedacktorFragmentChet" />
+        <action
+            android:id="@+id/action_listRedacktorFragmentChet_to_updateRedacktorFragmentChet"
+            app:destination="@id/updateRedacktorFragmentChet" />
+    </fragment>
+    <fragment
+        android:id="@+id/addRedacktorFragmentChet"
+        android:name="com.mikhail_R_gps_tracker.gpsassistant.fragments.chet.redacktor.add.AddRedacktorFragmentChet"
+        android:label="fragment_add_redacktor_chet"
+        tools:layout="@layout/fragment_add_redacktor_chet" >
+        <action
+            android:id="@+id/action_addRedacktorFragmentChet_to_listRedacktorFragmentChet"
+            app:destination="@id/listRedacktorFragmentChet" />
+    </fragment>
+    <fragment
+        android:id="@+id/updateRedacktorFragmentChet"
+        android:name="com.mikhail_R_gps_tracker.gpsassistant.fragments.chet.redacktor.update.UpdateRedacktorFragmentChet"
+        android:label="fragment_update_redacktor_chet"
+        tools:layout="@layout/fragment_update_redacktor_chet" >
+        <action
+            android:id="@+id/action_updateRedacktorFragmentChet_to_listRedacktorFragmentChet"
+            app:destination="@id/listRedacktorFragmentChet" />
+        <argument
+            android:name="item_redacktor_chet"
+            app:argType="com.mikhail_R_gps_tracker.gpsassistant.db.redacktor.ListItemRedacktorChet" />
+    </fragment>
+</navigation>

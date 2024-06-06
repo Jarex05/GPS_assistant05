@@ -1,0 +1,783 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFE8E5E5"
+    tools:context=".fragments.nechet.MainFragmentNechet">
+
+    <org.osmdroid.views.MapView
+        android:id="@+id/mapNechet"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="45dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0">
+
+    </org.osmdroid.views.MapView>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fCenterNechet"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:clickable="true"
+        android:src="@drawable/is_my_loc_center_nechet"
+        app:backgroundTint="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="ContentDescription,SpeakableTextPresentCheck" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fStartStopNechet"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:clickable="true"
+        android:src="@drawable/is_play_nechet"
+        app:backgroundTint="@color/white"
+        app:layout_constraintEnd_toEndOf="@+id/fCenterNechet"
+        app:layout_constraintTop_toBottomOf="@+id/fCenterNechet"
+        tools:ignore="ContentDescription,SpeakableTextPresentCheck" />
+
+    <!--    <TextView-->
+    <!--        android:id="@+id/tvTimeNechet"-->
+    <!--        android:layout_width="wrap_content"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:layout_marginStart="10dp"-->
+    <!--        android:layout_marginTop="10dp"-->
+    <!--        android:background="#99FFFFFF"-->
+    <!--        android:paddingStart="5dp"-->
+    <!--        android:paddingEnd="5dp"-->
+    <!--        android:text="Время 00:00:00:000"-->
+    <!--        android:textColor="#000000"-->
+    <!--        app:layout_constraintStart_toStartOf="parent"-->
+    <!--        app:layout_constraintTop_toTopOf="parent" />-->
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fStartNechetFakt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:clickable="true"
+        android:src="@drawable/is_start_nechet_fakt"
+        app:backgroundTint="#FFFFFF"
+        app:layout_constraintEnd_toEndOf="@+id/fStartStopNechet"
+        app:layout_constraintStart_toStartOf="@+id/fStartStopNechet"
+        app:layout_constraintTop_toBottomOf="@+id/fStartStopNechet"
+        tools:ignore="ContentDescription,SpeakableTextPresentCheck" />
+
+    <Button
+        android:id="@+id/mainUslNechet"
+        android:layout_width="65dp"
+        android:layout_height="45dp"
+        android:layout_marginTop="15dp"
+        android:backgroundTint="#CC4C07"
+        android:text="Усл."
+        android:textSize="8sp"
+        app:layout_constraintEnd_toEndOf="@+id/fStartNechetFakt"
+        app:layout_constraintStart_toStartOf="@+id/fStartNechetFakt"
+        app:layout_constraintTop_toBottomOf="@+id/fStartNechetFakt" />
+
+    <TextView
+        android:id="@+id/tvSpeedNechet"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#F81944"
+        android:textSize="20sp"
+        android:textStyle="bold|italic"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@+id/idKmNechet"
+        app:layout_constraintEnd_toEndOf="@+id/mainDistanceNechet"
+        app:layout_constraintTop_toTopOf="@+id/idKmNechet" />
+
+    <TextView
+        android:id="@+id/tvDistanceNechet"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:textColor="#000000"
+        android:textSize="20sp"
+        android:textStyle="italic"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@+id/mainDistanceNechet"
+        app:layout_constraintStart_toEndOf="@+id/savePlusNechet50"
+        app:layout_constraintTop_toTopOf="@+id/mainDistanceNechet" />
+
+    <Button
+        android:id="@+id/mainDistanceNechet"
+        android:layout_width="75dp"
+        android:layout_height="55dp"
+        android:layout_marginEnd="10dp"
+        android:backgroundTint="?android:attr/colorMultiSelectHighlight"
+        android:text="@string/km_nechet"
+        android:textColor="#000000"
+        android:textSize="15sp"
+        android:visibility="gone"
+        app:layout_constraintEnd_toStartOf="@+id/fCenterNechet"
+        app:layout_constraintTop_toTopOf="@+id/fCenterNechet" />
+
+    <TextView
+        android:id="@+id/idKmNechet"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:textColor="#000000"
+        android:textSize="30sp"
+        android:textStyle="bold|italic"
+        app:layout_constraintBottom_toBottomOf="@+id/fStartStopNechet"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/fStartStopNechet" />
+
+    <TextView
+        android:id="@+id/tvKmNechet"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:fontFamily="@font/amiko_semibold"
+        android:textColor="#000000"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="@+id/idKmNechet"
+        app:layout_constraintTop_toBottomOf="@+id/idKmNechet" />
+
+    <TextView
+        android:id="@+id/tvKmFaktNechet"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:fontFamily="@font/anton"
+        android:textColor="#000000"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@+id/tvKmNechet"
+        app:layout_constraintStart_toEndOf="@+id/tvKmNechet"
+        app:layout_constraintTop_toTopOf="@+id/tvKmNechet" />
+
+    <TextView
+        android:id="@+id/tvOgrNechet15"
+        android:layout_width="42dp"
+        android:layout_height="42dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="170dp"
+        android:hint="@string/km_15_nechet"
+        android:textColor="@color/tvOgr"
+        android:textColorHint="@color/tvOgrHint"
+        android:textSize="30sp"
+        android:textStyle="bold|italic"
+        app:layout_constraintStart_toStartOf="@+id/mapNechet"
+        app:layout_constraintTop_toTopOf="@+id/mapNechet"
+        tools:ignore="TextContrastCheck" />
+
+    <TextView
+        android:id="@+id/tvOgrNechet25"
+        android:layout_width="42dp"
+        android:layout_height="42dp"
+        android:layout_marginTop="5dp"
+        android:hint="@string/km_25_nechet"
+        android:textColor="@color/tvOgr"
+        android:textColorHint="@color/tvOgrHint"
+        android:textSize="30sp"
+        android:textStyle="bold|italic"
+        app:layout_constraintStart_toStartOf="@+id/tvOgrNechet15"
+        app:layout_constraintTop_toBottomOf="@+id/tvOgrNechet15"
+        tools:ignore="TextContrastCheck" />
+
+    <TextView
+        android:id="@+id/tvOgrNechet40"
+        android:layout_width="42dp"
+        android:layout_height="42dp"
+        android:layout_marginTop="5dp"
+        android:hint="@string/km_40_nechet"
+        android:textColor="@color/tvOgr"
+        android:textColorHint="@color/tvOgrHint"
+        android:textSize="30sp"
+        android:textStyle="bold|italic"
+        app:layout_constraintStart_toStartOf="@+id/tvOgrNechet25"
+        app:layout_constraintTop_toBottomOf="@+id/tvOgrNechet25"
+        tools:ignore="TextContrastCheck" />
+
+    <TextView
+        android:id="@+id/tvOgrNechet50"
+        android:layout_width="42dp"
+        android:layout_height="42dp"
+        android:layout_marginTop="5dp"
+        android:hint="@string/km_50_nechet"
+        android:textColor="@color/tvOgr"
+        android:textColorHint="@color/tvOgrHint"
+        android:textSize="30sp"
+        android:textStyle="bold|italic"
+        app:layout_constraintStart_toStartOf="@+id/tvOgrNechet40"
+        app:layout_constraintTop_toBottomOf="@+id/tvOgrNechet40"
+        tools:ignore="TextContrastCheck" />
+
+    <TextView
+        android:id="@+id/tvOgrNechet55"
+        android:layout_width="42dp"
+        android:layout_height="42dp"
+        android:layout_marginTop="5dp"
+        android:hint="@string/km_55_nechet"
+        android:textColor="@color/tvOgr"
+        android:textColorHint="@color/tvOgrHint"
+        android:textSize="30sp"
+        android:textStyle="bold|italic"
+        app:layout_constraintStart_toStartOf="@+id/tvOgrNechet50"
+        app:layout_constraintTop_toBottomOf="@+id/tvOgrNechet50"
+        tools:ignore="TextContrastCheck" />
+
+    <TextView
+        android:id="@+id/tvOgrNechet60"
+        android:layout_width="42dp"
+        android:layout_height="42dp"
+        android:layout_marginTop="5dp"
+        android:hint="@string/km_60_nechet"
+        android:textColor="@color/tvOgr"
+        android:textColorHint="@color/tvOgrHint"
+        android:textSize="30sp"
+        android:textStyle="bold|italic"
+        app:layout_constraintStart_toStartOf="@+id/tvOgrNechet55"
+        app:layout_constraintTop_toBottomOf="@+id/tvOgrNechet55"
+        tools:ignore="TextContrastCheck" />
+
+    <TextView
+        android:id="@+id/tvOgrNechet65"
+        android:layout_width="42dp"
+        android:layout_height="42dp"
+        android:layout_marginTop="5dp"
+        android:hint="@string/km_65_nechet"
+        android:textColor="@color/tvOgr"
+        android:textColorHint="@color/tvOgrHint"
+        android:textSize="30sp"
+        android:textStyle="bold|italic"
+        app:layout_constraintStart_toStartOf="@+id/tvOgrNechet60"
+        app:layout_constraintTop_toBottomOf="@+id/tvOgrNechet60"
+        tools:ignore="TextContrastCheck" />
+
+    <TextView
+        android:id="@+id/tvOgrNechet70"
+        android:layout_width="42dp"
+        android:layout_height="42dp"
+        android:layout_marginTop="5dp"
+        android:hint="@string/km_70_nechet"
+        android:textColor="@color/tvOgr"
+        android:textColorHint="@color/tvOgrHint"
+        android:textSize="30sp"
+        android:textStyle="bold|italic"
+        app:layout_constraintStart_toStartOf="@+id/tvOgrNechet65"
+        app:layout_constraintTop_toBottomOf="@+id/tvOgrNechet65"
+        tools:ignore="TextContrastCheck" />
+
+    <TextView
+        android:id="@+id/tvOgrNechet75"
+        android:layout_width="42dp"
+        android:layout_height="42dp"
+        android:layout_marginTop="5dp"
+        android:hint="@string/km_75_nechet"
+        android:textColor="@color/tvOgr"
+        android:textColorHint="@color/tvOgrHint"
+        android:textSize="30sp"
+        android:textStyle="bold|italic"
+        app:layout_constraintStart_toStartOf="@+id/tvOgrNechet70"
+        app:layout_constraintTop_toBottomOf="@+id/tvOgrNechet70"
+        tools:ignore="TextContrastCheck" />
+
+    <TextView
+        android:id="@+id/tvKmPkNechet15"
+        android:layout_width="275dp"
+        android:layout_height="42dp"
+        android:layout_marginStart="10dp"
+        android:elegantTextHeight="true"
+        android:textColor="#000000"
+        android:textSize="20sp"
+        android:textStyle="italic"
+        app:layout_constraintBottom_toBottomOf="@+id/tvOgrNechet15"
+        app:layout_constraintStart_toEndOf="@+id/tvOgrNechet15"
+        app:layout_constraintTop_toTopOf="@+id/tvOgrNechet15" />
+
+    <TextView
+        android:id="@+id/tvKmPkNechet25"
+        android:layout_width="275dp"
+        android:layout_height="42dp"
+        android:layout_marginStart="10dp"
+        android:elegantTextHeight="true"
+        android:textColor="#000000"
+        android:textSize="20sp"
+        android:textStyle="italic"
+        app:layout_constraintBottom_toBottomOf="@+id/tvOgrNechet25"
+        app:layout_constraintStart_toEndOf="@+id/tvOgrNechet25"
+        app:layout_constraintTop_toTopOf="@+id/tvOgrNechet25" />
+
+    <TextView
+        android:id="@+id/tvKmPkNechet40"
+        android:layout_width="275dp"
+        android:layout_height="42dp"
+        android:layout_marginStart="10dp"
+        android:elegantTextHeight="true"
+        android:textColor="#000000"
+        android:textSize="20sp"
+        android:textStyle="italic"
+        app:layout_constraintBottom_toBottomOf="@+id/tvOgrNechet40"
+        app:layout_constraintStart_toEndOf="@+id/tvOgrNechet40"
+        app:layout_constraintTop_toTopOf="@+id/tvOgrNechet40" />
+
+    <TextView
+        android:id="@+id/tvKmPkNechet50"
+        android:layout_width="275dp"
+        android:layout_height="42dp"
+        android:layout_marginStart="10dp"
+        android:elegantTextHeight="true"
+        android:textColor="#000000"
+        android:textSize="20sp"
+        android:textStyle="italic"
+        app:layout_constraintBottom_toBottomOf="@+id/tvOgrNechet50"
+        app:layout_constraintStart_toEndOf="@+id/tvOgrNechet50"
+        app:layout_constraintTop_toTopOf="@+id/tvOgrNechet50" />
+
+    <TextView
+        android:id="@+id/tvKmPkNechet55"
+        android:layout_width="275dp"
+        android:layout_height="42dp"
+        android:layout_marginStart="10dp"
+        android:elegantTextHeight="true"
+        android:textColor="#000000"
+        android:textSize="20sp"
+        android:textStyle="italic"
+        app:layout_constraintBottom_toBottomOf="@+id/tvOgrNechet55"
+        app:layout_constraintStart_toEndOf="@+id/tvOgrNechet55"
+        app:layout_constraintTop_toTopOf="@+id/tvOgrNechet55" />
+
+    <TextView
+        android:id="@+id/tvKmPkNechet60"
+        android:layout_width="275dp"
+        android:layout_height="42dp"
+        android:layout_marginStart="10dp"
+        android:elegantTextHeight="true"
+        android:textColor="#000000"
+        android:textSize="20sp"
+        android:textStyle="italic"
+        app:layout_constraintBottom_toBottomOf="@+id/tvOgrNechet60"
+        app:layout_constraintStart_toEndOf="@+id/tvOgrNechet60"
+        app:layout_constraintTop_toTopOf="@+id/tvOgrNechet60" />
+
+    <TextView
+        android:id="@+id/tvKmPkNechet65"
+        android:layout_width="275dp"
+        android:layout_height="42dp"
+        android:layout_marginStart="10dp"
+        android:elegantTextHeight="true"
+        android:textColor="#000000"
+        android:textSize="20sp"
+        android:textStyle="italic"
+        app:layout_constraintBottom_toBottomOf="@+id/tvOgrNechet65"
+        app:layout_constraintStart_toEndOf="@+id/tvOgrNechet65"
+        app:layout_constraintTop_toTopOf="@+id/tvOgrNechet65" />
+
+    <TextView
+        android:id="@+id/tvKmPkNechet70"
+        android:layout_width="275dp"
+        android:layout_height="42dp"
+        android:layout_marginStart="10dp"
+        android:elegantTextHeight="true"
+        android:textColor="#000000"
+        android:textSize="20sp"
+        android:textStyle="italic"
+        app:layout_constraintBottom_toBottomOf="@+id/tvOgrNechet70"
+        app:layout_constraintStart_toEndOf="@+id/tvOgrNechet70"
+        app:layout_constraintTop_toTopOf="@+id/tvOgrNechet70" />
+
+    <TextView
+        android:id="@+id/tvKmPkNechet75"
+        android:layout_width="275dp"
+        android:layout_height="42dp"
+        android:layout_marginStart="10dp"
+        android:elegantTextHeight="false"
+        android:textColor="#000000"
+        android:textSize="20sp"
+        android:textStyle="italic"
+        app:layout_constraintBottom_toBottomOf="@+id/tvOgrNechet75"
+        app:layout_constraintStart_toEndOf="@+id/tvOgrNechet75"
+        app:layout_constraintTop_toTopOf="@+id/tvOgrNechet75" />
+
+    <ImageButton
+        android:id="@+id/savePlusNechet50"
+        android:layout_width="33dp"
+        android:layout_height="33dp"
+        android:layout_marginStart="10dp"
+        android:backgroundTint="#00FFFFFF"
+        android:src="@drawable/row_arrow_circle_left_chet"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@+id/tvDistanceNechet"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/tvDistanceNechet"
+        tools:ignore="ContentDescription,SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+
+    <ImageButton
+        android:id="@+id/saveMinusNechet50"
+        android:layout_width="33dp"
+        android:layout_height="33dp"
+        android:layout_marginEnd="20dp"
+        android:backgroundTint="#00FFFFFF"
+        android:src="@drawable/row_arrow_circle_right_nechet"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@+id/tvDistanceNechet"
+        app:layout_constraintEnd_toStartOf="@+id/mainDistanceNechet"
+        app:layout_constraintStart_toEndOf="@+id/tvDistanceNechet"
+        app:layout_constraintTop_toTopOf="@+id/tvDistanceNechet"
+        tools:ignore="ContentDescription,SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+
+<!--    <?xml version="1.0" encoding="utf-8"?>-->
+<!--<androidx.constraintlayout.widget.ConstraintLayout-->
+<!--xmlns:android="http://schemas.android.com/apk/res/android"-->
+<!--xmlns:app="http://schemas.android.com/apk/res-auto"-->
+<!--xmlns:tools="http://schemas.android.com/tools"-->
+<!--android:layout_width="match_parent"-->
+<!--android:layout_height="match_parent"-->
+<!--tools:context=".fragments.nechet.MainFragmentNechet">-->
+
+<!--<org.osmdroid.views.MapView-->
+<!--    android:id="@+id/mapNechet"-->
+<!--    android:layout_width="match_parent"-->
+<!--    android:layout_height="match_parent"-->
+<!--    app:layout_constraintBottom_toBottomOf="parent"-->
+<!--    app:layout_constraintEnd_toEndOf="parent"-->
+<!--    app:layout_constraintHorizontal_bias="0.0"-->
+<!--    app:layout_constraintStart_toStartOf="parent"-->
+<!--    app:layout_constraintTop_toTopOf="parent"-->
+<!--    app:layout_constraintVertical_bias="0.0">-->
+
+<!--</org.osmdroid.views.MapView>-->
+
+<!--<com.google.android.material.floatingactionbutton.FloatingActionButton-->
+<!--    android:id="@+id/fCenterNechet"-->
+<!--    android:layout_width="wrap_content"-->
+<!--    android:layout_height="wrap_content"-->
+<!--    android:layout_marginTop="10dp"-->
+<!--    android:layout_marginEnd="10dp"-->
+<!--    android:clickable="true"-->
+<!--    android:src="@drawable/is_my_loc_center_nechet"-->
+<!--    app:backgroundTint="@color/white"-->
+<!--    app:layout_constraintEnd_toEndOf="parent"-->
+<!--    app:layout_constraintTop_toTopOf="parent"-->
+<!--    tools:ignore="ContentDescription,SpeakableTextPresentCheck" />-->
+
+<!--<com.google.android.material.floatingactionbutton.FloatingActionButton-->
+<!--    android:id="@+id/fStartStopNechet"-->
+<!--    android:layout_width="wrap_content"-->
+<!--    android:layout_height="wrap_content"-->
+<!--    android:layout_marginTop="10dp"-->
+<!--    android:clickable="true"-->
+<!--    android:src="@drawable/is_play_nechet"-->
+<!--    app:backgroundTint="@color/white"-->
+<!--    app:layout_constraintEnd_toEndOf="@+id/fCenterNechet"-->
+<!--    app:layout_constraintTop_toBottomOf="@+id/fCenterNechet"-->
+<!--    tools:ignore="ContentDescription,SpeakableTextPresentCheck" />-->
+
+<!--<TextView-->
+<!--    android:id="@+id/tvTimeNechet"-->
+<!--    android:layout_width="wrap_content"-->
+<!--    android:layout_height="wrap_content"-->
+<!--    android:layout_marginStart="10dp"-->
+<!--    android:layout_marginTop="10dp"-->
+<!--    android:background="#99FFFFFF"-->
+<!--    android:paddingStart="5dp"-->
+<!--    android:paddingEnd="5dp"-->
+<!--    android:text="Время 00:00:00:000"-->
+<!--    android:textColor="#000000"-->
+<!--    app:layout_constraintStart_toStartOf="parent"-->
+<!--    app:layout_constraintTop_toTopOf="parent" />-->
+
+<!--<TextView-->
+<!--    android:id="@+id/tvSpeedNechet"-->
+<!--    android:layout_width="wrap_content"-->
+<!--    android:layout_height="wrap_content"-->
+<!--    android:layout_marginTop="10dp"-->
+<!--    android:background="#99FFFFFF"-->
+<!--    android:paddingStart="5dp"-->
+<!--    android:paddingEnd="5dp"-->
+<!--    android:text="Скорость: 0,0 км/h"-->
+<!--    android:textColor="#000000"-->
+<!--    app:layout_constraintStart_toStartOf="@+id/tvTimeNechet"-->
+<!--    app:layout_constraintTop_toBottomOf="@+id/tvTimeNechet" />-->
+
+<!--<TextView-->
+<!--    android:id="@+id/tvDistanceNechet"-->
+<!--    android:layout_width="wrap_content"-->
+<!--    android:layout_height="wrap_content"-->
+<!--    android:layout_marginTop="10dp"-->
+<!--    android:background="#99FFFFFF"-->
+<!--    android:paddingStart="5dp"-->
+<!--    android:paddingEnd="5dp"-->
+<!--    android:text="Дистанция: 0,000 км"-->
+<!--    android:textColor="#000000"-->
+<!--    android:textSize="24sp"-->
+<!--    app:layout_constraintStart_toStartOf="@+id/tvSpeedNechet"-->
+<!--    app:layout_constraintTop_toBottomOf="@+id/tvSpeedNechet" />-->
+
+<!--<Button-->
+<!--    android:id="@+id/mainDistanceNechet"-->
+<!--    android:layout_width="wrap_content"-->
+<!--    android:layout_height="wrap_content"-->
+<!--    android:layout_marginStart="20dp"-->
+<!--    android:layout_marginTop="50dp"-->
+<!--    android:text="Введите КМ"-->
+<!--    app:layout_constraintStart_toStartOf="@+id/tvDistanceNechet"-->
+<!--    app:layout_constraintTop_toBottomOf="@+id/tvDistanceNechet" />-->
+
+<!--<TextView-->
+<!--    android:id="@+id/idKmNechet"-->
+<!--    android:layout_width="wrap_content"-->
+<!--    android:layout_height="wrap_content"-->
+<!--    android:layout_marginStart="75dp"-->
+<!--    android:layout_marginTop="15dp"-->
+<!--    android:textColor="#000000"-->
+<!--    android:textSize="30dp"-->
+<!--    android:textStyle="bold|italic"-->
+<!--    app:layout_constraintStart_toStartOf="@+id/mainDistanceNechet"-->
+<!--    app:layout_constraintTop_toBottomOf="@+id/mainDistanceNechet" />-->
+
+<!--<TextView-->
+<!--    android:id="@+id/tvOgrNechet15"-->
+<!--    android:layout_width="42dp"-->
+<!--    android:layout_height="42dp"-->
+<!--    android:layout_marginStart="10dp"-->
+<!--    android:layout_marginTop="15dp"-->
+<!--    android:hint="15"-->
+<!--    android:textColor="#FF0000"-->
+<!--    android:textColorHint="#F1ECEC"-->
+<!--    android:textSize="30dp"-->
+<!--    android:textStyle="bold|italic"-->
+<!--    app:layout_constraintStart_toStartOf="@+id/mainDistanceNechet"-->
+<!--    app:layout_constraintTop_toBottomOf="@+id/idKmNechet" />-->
+
+<!--<TextView-->
+<!--    android:id="@+id/tvOgrNechet25"-->
+<!--    android:layout_width="42dp"-->
+<!--    android:layout_height="42dp"-->
+<!--    android:layout_marginTop="5dp"-->
+<!--    android:hint="25"-->
+<!--    android:textColor="#FF0000"-->
+<!--    android:textColorHint="#F1ECEC"-->
+<!--    android:textSize="30dp"-->
+<!--    android:textStyle="bold|italic"-->
+<!--    app:layout_constraintStart_toStartOf="@+id/tvOgrNechet15"-->
+<!--    app:layout_constraintTop_toBottomOf="@+id/tvOgrNechet15" />-->
+
+<!--<TextView-->
+<!--    android:id="@+id/tvOgrNechet40"-->
+<!--    android:layout_width="42dp"-->
+<!--    android:layout_height="42dp"-->
+<!--    android:layout_marginTop="5dp"-->
+<!--    android:hint="40"-->
+<!--    android:textColor="#FF0000"-->
+<!--    android:textColorHint="#F1ECEC"-->
+<!--    android:textSize="30dp"-->
+<!--    android:textStyle="bold|italic"-->
+<!--    app:layout_constraintStart_toStartOf="@+id/tvOgrNechet25"-->
+<!--    app:layout_constraintTop_toBottomOf="@+id/tvOgrNechet25" />-->
+
+<!--<TextView-->
+<!--    android:id="@+id/tvOgrNechet50"-->
+<!--    android:layout_width="42dp"-->
+<!--    android:layout_height="42dp"-->
+<!--    android:layout_marginTop="5dp"-->
+<!--    android:hint="50"-->
+<!--    android:textColor="#FF0000"-->
+<!--    android:textColorHint="#F1ECEC"-->
+<!--    android:textSize="30dp"-->
+<!--    android:textStyle="bold|italic"-->
+<!--    app:layout_constraintStart_toStartOf="@+id/tvOgrNechet40"-->
+<!--    app:layout_constraintTop_toBottomOf="@+id/tvOgrNechet40" />-->
+
+<!--<TextView-->
+<!--    android:id="@+id/tvOgrNechet55"-->
+<!--    android:layout_width="42dp"-->
+<!--    android:layout_height="42dp"-->
+<!--    android:layout_marginTop="5dp"-->
+<!--    android:hint="55"-->
+<!--    android:textColor="#FF0000"-->
+<!--    android:textColorHint="#F1ECEC"-->
+<!--    android:textSize="30dp"-->
+<!--    android:textStyle="bold|italic"-->
+<!--    app:layout_constraintStart_toStartOf="@+id/tvOgrNechet50"-->
+<!--    app:layout_constraintTop_toBottomOf="@+id/tvOgrNechet50" />-->
+
+<!--<TextView-->
+<!--    android:id="@+id/tvOgrNechet60"-->
+<!--    android:layout_width="42dp"-->
+<!--    android:layout_height="42dp"-->
+<!--    android:layout_marginTop="5dp"-->
+<!--    android:hint="60"-->
+<!--    android:textColor="#FF0000"-->
+<!--    android:textColorHint="#F1ECEC"-->
+<!--    android:textSize="30dp"-->
+<!--    android:textStyle="bold|italic"-->
+<!--    app:layout_constraintStart_toStartOf="@+id/tvOgrNechet55"-->
+<!--    app:layout_constraintTop_toBottomOf="@+id/tvOgrNechet55" />-->
+
+<!--<TextView-->
+<!--    android:id="@+id/tvOgrNechet65"-->
+<!--    android:layout_width="42dp"-->
+<!--    android:layout_height="42dp"-->
+<!--    android:layout_marginTop="5dp"-->
+<!--    android:hint="65"-->
+<!--    android:textColor="#FF0000"-->
+<!--    android:textColorHint="#F1ECEC"-->
+<!--    android:textSize="30dp"-->
+<!--    android:textStyle="bold|italic"-->
+<!--    app:layout_constraintStart_toStartOf="@+id/tvOgrNechet60"-->
+<!--    app:layout_constraintTop_toBottomOf="@+id/tvOgrNechet60" />-->
+
+<!--<TextView-->
+<!--    android:id="@+id/tvOgrNechet70"-->
+<!--    android:layout_width="42dp"-->
+<!--    android:layout_height="42dp"-->
+<!--    android:layout_marginTop="5dp"-->
+<!--    android:hint="70"-->
+<!--    android:textColor="#FF0000"-->
+<!--    android:textColorHint="#F1ECEC"-->
+<!--    android:textSize="30dp"-->
+<!--    android:textStyle="bold|italic"-->
+<!--    app:layout_constraintStart_toStartOf="@+id/tvOgrNechet65"-->
+<!--    app:layout_constraintTop_toBottomOf="@+id/tvOgrNechet65" />-->
+
+<!--<TextView-->
+<!--    android:id="@+id/tvOgrNechet75"-->
+<!--    android:layout_width="42dp"-->
+<!--    android:layout_height="42dp"-->
+<!--    android:layout_marginTop="5dp"-->
+<!--    android:hint="75"-->
+<!--    android:textColor="#FF0000"-->
+<!--    android:textColorHint="#F1ECEC"-->
+<!--    android:textSize="30dp"-->
+<!--    android:textStyle="bold|italic"-->
+<!--    app:layout_constraintStart_toStartOf="@+id/tvOgrNechet70"-->
+<!--    app:layout_constraintTop_toBottomOf="@+id/tvOgrNechet70" />-->
+
+<!--<TextView-->
+<!--    android:id="@+id/tvKmPkNechet15"-->
+<!--    android:layout_width="275dp"-->
+<!--    android:layout_height="42dp"-->
+<!--    android:layout_marginStart="25dp"-->
+<!--    android:elegantTextHeight="true"-->
+<!--    android:textColor="#000000"-->
+<!--    android:textSize="20dp"-->
+<!--    android:textStyle="italic"-->
+<!--    app:layout_constraintBottom_toBottomOf="@+id/tvOgrNechet15"-->
+<!--    app:layout_constraintStart_toEndOf="@+id/tvOgrNechet15"-->
+<!--    app:layout_constraintTop_toTopOf="@+id/tvOgrNechet15" />-->
+
+<!--<TextView-->
+<!--    android:id="@+id/tvKmPkNechet25"-->
+<!--    android:layout_width="275dp"-->
+<!--    android:layout_height="42dp"-->
+<!--    android:layout_marginStart="25dp"-->
+<!--    android:elegantTextHeight="true"-->
+<!--    android:textColor="#000000"-->
+<!--    android:textSize="20dp"-->
+<!--    android:textStyle="italic"-->
+<!--    app:layout_constraintBottom_toBottomOf="@+id/tvOgrNechet25"-->
+<!--    app:layout_constraintStart_toEndOf="@+id/tvOgrNechet25"-->
+<!--    app:layout_constraintTop_toTopOf="@+id/tvOgrNechet25" />-->
+
+<!--<TextView-->
+<!--    android:id="@+id/tvKmPkNechet40"-->
+<!--    android:layout_width="275dp"-->
+<!--    android:layout_height="42dp"-->
+<!--    android:layout_marginStart="25dp"-->
+<!--    android:elegantTextHeight="true"-->
+<!--    android:textColor="#000000"-->
+<!--    android:textSize="20dp"-->
+<!--    android:textStyle="italic"-->
+<!--    app:layout_constraintBottom_toBottomOf="@+id/tvOgrNechet40"-->
+<!--    app:layout_constraintStart_toEndOf="@+id/tvOgrNechet40"-->
+<!--    app:layout_constraintTop_toTopOf="@+id/tvOgrNechet40" />-->
+
+<!--<TextView-->
+<!--    android:id="@+id/tvKmPkNechet50"-->
+<!--    android:layout_width="275dp"-->
+<!--    android:layout_height="42dp"-->
+<!--    android:layout_marginStart="25dp"-->
+<!--    android:elegantTextHeight="true"-->
+<!--    android:textColor="#000000"-->
+<!--    android:textSize="20dp"-->
+<!--    android:textStyle="italic"-->
+<!--    app:layout_constraintBottom_toBottomOf="@+id/tvOgrNechet50"-->
+<!--    app:layout_constraintStart_toEndOf="@+id/tvOgrNechet50"-->
+<!--    app:layout_constraintTop_toTopOf="@+id/tvOgrNechet50" />-->
+
+<!--<TextView-->
+<!--    android:id="@+id/tvKmPkNechet55"-->
+<!--    android:layout_width="275dp"-->
+<!--    android:layout_height="42dp"-->
+<!--    android:layout_marginStart="25dp"-->
+<!--    android:elegantTextHeight="true"-->
+<!--    android:textColor="#000000"-->
+<!--    android:textSize="20dp"-->
+<!--    android:textStyle="italic"-->
+<!--    app:layout_constraintBottom_toBottomOf="@+id/tvOgrNechet55"-->
+<!--    app:layout_constraintStart_toEndOf="@+id/tvOgrNechet55"-->
+<!--    app:layout_constraintTop_toTopOf="@+id/tvOgrNechet55" />-->
+
+<!--<TextView-->
+<!--    android:id="@+id/tvKmPkNechet60"-->
+<!--    android:layout_width="275dp"-->
+<!--    android:layout_height="42dp"-->
+<!--    android:layout_marginStart="25dp"-->
+<!--    android:elegantTextHeight="true"-->
+<!--    android:textColor="#000000"-->
+<!--    android:textSize="20dp"-->
+<!--    android:textStyle="italic"-->
+<!--    app:layout_constraintBottom_toBottomOf="@+id/tvOgrNechet60"-->
+<!--    app:layout_constraintStart_toEndOf="@+id/tvOgrNechet60"-->
+<!--    app:layout_constraintTop_toTopOf="@+id/tvOgrNechet60" />-->
+
+<!--<TextView-->
+<!--    android:id="@+id/tvKmPkNechet65"-->
+<!--    android:layout_width="275dp"-->
+<!--    android:layout_height="42dp"-->
+<!--    android:layout_marginStart="25dp"-->
+<!--    android:elegantTextHeight="true"-->
+<!--    android:textColor="#000000"-->
+<!--    android:textSize="20dp"-->
+<!--    android:textStyle="italic"-->
+<!--    app:layout_constraintBottom_toBottomOf="@+id/tvOgrNechet65"-->
+<!--    app:layout_constraintStart_toEndOf="@+id/tvOgrNechet65"-->
+<!--    app:layout_constraintTop_toTopOf="@+id/tvOgrNechet65" />-->
+
+<!--<TextView-->
+<!--    android:id="@+id/tvKmPkNechet70"-->
+<!--    android:layout_width="275dp"-->
+<!--    android:layout_height="42dp"-->
+<!--    android:layout_marginStart="25dp"-->
+<!--    android:elegantTextHeight="true"-->
+<!--    android:textColor="#000000"-->
+<!--    android:textSize="20dp"-->
+<!--    android:textStyle="italic"-->
+<!--    app:layout_constraintBottom_toBottomOf="@+id/tvOgrNechet70"-->
+<!--    app:layout_constraintStart_toEndOf="@+id/tvOgrNechet70"-->
+<!--    app:layout_constraintTop_toTopOf="@+id/tvOgrNechet70" />-->
+
+<!--<TextView-->
+<!--    android:id="@+id/tvKmPkNechet75"-->
+<!--    android:layout_width="275dp"-->
+<!--    android:layout_height="42dp"-->
+<!--    android:layout_marginStart="25dp"-->
+<!--    android:elegantTextHeight="false"-->
+<!--    android:textColor="#000000"-->
+<!--    android:textSize="20dp"-->
+<!--    android:textStyle="italic"-->
+<!--    app:layout_constraintBottom_toBottomOf="@+id/tvOgrNechet75"-->
+<!--    app:layout_constraintStart_toEndOf="@+id/tvOgrNechet75"-->
+<!--    app:layout_constraintTop_toTopOf="@+id/tvOgrNechet75" />-->
+
+
+<!--</androidx.constraintlayout.widget.ConstraintLayout>-->

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/my_nav_limitations_nechet"
+    app:startDestination="@id/listLimitationsFragmentNechet">
+
+    <fragment
+        android:id="@+id/listLimitationsFragmentNechet"
+        android:name="com.mikhail_R_gps_tracker.gpsassistant.fragments.nechet.limitation.list.ListLimitationsFragmentNechet"
+        android:label="fragment_list_limitations_nechet"
+        tools:layout="@layout/fragment_list_limitations_nechet" >
+        <action
+            android:id="@+id/action_listLimitationsFragmentNechet_to_addLimitationsFragmentNechet"
+            app:destination="@id/addLimitationsFragmentNechet" />
+        <action
+            android:id="@+id/action_listLimitationsFragmentNechet_to_updateLimitationsFragmentNechet"
+            app:destination="@id/updateLimitationsFragmentNechet" />
+    </fragment>
+    <fragment
+        android:id="@+id/addLimitationsFragmentNechet"
+        android:name="com.mikhail_R_gps_tracker.gpsassistant.fragments.nechet.limitation.add.AddLimitationsFragmentNechet"
+        android:label="fragment_add_limitations_nechet"
+        tools:layout="@layout/fragment_add_limitations_nechet" >
+        <action
+            android:id="@+id/action_addLimitationsFragmentNechet_to_listLimitationsFragmentNechet"
+            app:destination="@id/listLimitationsFragmentNechet" />
+    </fragment>
+    <fragment
+        android:id="@+id/updateLimitationsFragmentNechet"
+        android:name="com.mikhail_R_gps_tracker.gpsassistant.fragments.nechet.limitation.update.UpdateLimitationsFragmentNechet"
+        android:label="fragment_update_limitations_nechet"
+        tools:layout="@layout/fragment_update_limitations_nechet" >
+        <action
+            android:id="@+id/action_updateLimitationsFragmentNechet_to_listLimitationsFragmentNechet"
+            app:destination="@id/listLimitationsFragmentNechet" />
+        <argument android:name="item_limitations_nechet"
+            app:argType="com.mikhail_R_gps_tracker.gpsassistant.db.limitations.ListItemLimitationsNechet" />
+    </fragment>
+</navigation>

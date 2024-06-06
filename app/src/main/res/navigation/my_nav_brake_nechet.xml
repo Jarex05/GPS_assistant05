@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/my_nav_brake_nechet"
+    app:startDestination="@id/listBrakeFragmentNechet">
+
+    <fragment
+        android:id="@+id/listBrakeFragmentNechet"
+        android:name="com.mikhail_R_gps_tracker.gpsassistant.fragments.nechet.brake.list.ListBrakeFragmentNechet"
+        android:label="fragment_list_brake_nechet"
+        tools:layout="@layout/fragment_list_brake_nechet" >
+        <action
+            android:id="@+id/action_listBrakeFragmentNechet_to_addBrakeFragmentNechet"
+            app:destination="@id/addBrakeFragmentNechet" />
+        <action
+            android:id="@+id/action_listBrakeFragmentNechet_to_updateBrakeFragmentNechet"
+            app:destination="@id/updateBrakeFragmentNechet" />
+    </fragment>
+    <fragment
+        android:id="@+id/addBrakeFragmentNechet"
+        android:name="com.mikhail_R_gps_tracker.gpsassistant.fragments.nechet.brake.add.AddBrakeFragmentNechet"
+        android:label="fragment_add_brake_nechet"
+        tools:layout="@layout/fragment_add_brake_nechet" >
+        <action
+            android:id="@+id/action_addBrakeFragmentNechet_to_listBrakeFragmentNechet"
+            app:destination="@id/listBrakeFragmentNechet" />
+    </fragment>
+    <fragment
+        android:id="@+id/updateBrakeFragmentNechet"
+        android:name="com.mikhail_R_gps_tracker.gpsassistant.fragments.nechet.brake.update.UpdateBrakeFragmentNechet"
+        android:label="fragment_update_brake_nechet"
+        tools:layout="@layout/fragment_update_brake_nechet" >
+        <action
+            android:id="@+id/action_updateBrakeFragmentNechet_to_listBrakeFragmentNechet"
+            app:destination="@id/listBrakeFragmentNechet" />
+        <argument
+            android:name="item_brake_nechet"
+            app:argType="com.mikhail_R_gps_tracker.gpsassistant.db.brake.ListItemBrakeNechet" />
+    </fragment>
+</navigation>

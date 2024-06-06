@@ -1,0 +1,149 @@
+<resources>
+    <string name="app_name">GPS assistant</string>
+    <!--    Навигация с главного MainActivity-->
+    <string name="chet">Чётный</string>
+    <string name="nechet">Нечётный</string>
+
+    <!--    Нижнее меню ActivityChet-->
+    <string name="nome_chet">Главная</string>
+    <string name="limitations_chet">Ограничения</string>
+    <string name="pantograph_chet">Опускания</string>
+    <string name="brake_chet">Торможения</string>
+    <string name="redacktor_chet">Редактор</string>
+    <string name="tracks_chet">Маршруты</string>
+
+    <!--    Нижнее меню ActivityNechet-->
+    <string name="nome_nechet">Главная</string>
+    <string name="limitations_nechet">Ограничения</string>
+    <string name="pantograph_nechet">Опускания</string>
+    <string name="brake_nechet">Торможения</string>
+    <string name="redacktor_nechet">Редактор</string>
+    <string name="tracks_nechet">Маршруты</string>
+
+    <!--    Всплывающее окно включения GPS-->
+    <string name="location_disabled_chet">Геолокация выключена</string>
+    <string name="location_disabled_nechet">Геолокация выключена</string>
+    <string name="location_dialog_message_chet">Включить геолокацию?</string>
+    <string name="location_dialog_message_nechet">Включить геолокацию?</string>
+
+    <!--    Фрагмент Limitations ADD для четного-->
+    <string name="fragment_add_km_start_limitations_chet">Км. начало</string>
+    <string name="fragment_add_pk_start_limitations_chet">Пк. начало</string>
+    <string name="fragment_add_km_finish_limitations_chet">Км. финиш</string>
+    <string name="fragment_add_pk_finish_limitations_chet">Пк. финиш</string>
+    <string name="fragment_add_speed_limitations_chet">Скорость</string>
+
+    <!--    Фрагмент Limitations ADD для нечетного-->
+    <string name="fragment_add_km_start_limitations_nechet">Км. начало</string>
+    <string name="fragment_add_pk_start_limitations_nechet">Пк. начало</string>
+    <string name="fragment_add_km_finish_limitations_nechet">Км. финиш</string>
+    <string name="fragment_add_pk_finish_limitations_nechet">Пк. финиш</string>
+    <string name="fragment_add_speed_limitations_nechet">Скорость</string>
+
+    <!--    Фрагмент Pantograph ADD для четного-->
+    <string name="fragment_add_km_start_pantograph_chet">Км. начало</string>
+    <string name="fragment_add_pk_start_pantograph_chet">Пк. начало</string>
+
+    <!--    Фрагмент Pantograph ADD для нечетного-->
+    <string name="fragment_add_km_start_pantograph_nechet">Км. начало</string>
+    <string name="fragment_add_pk_start_pantograph_nechet">Пк. начало</string>
+
+    <!--    Фрагмент Redacktor ADD для четного-->
+    <string name="fragment_add_km_start_redacktor_chet">Км. начало</string>
+    <string name="fragment_add_pk_start_redacktor_chet">Пк. начало</string>
+    <string name="fragment_add_minus_redacktor_chet">Минус</string>
+    <string name="fragment_add_plus_redacktor_chet">Плюс</string>
+
+    <!--    Фрагмент Redacktor ADD для нечетного-->
+    <string name="fragment_add_km_start_redacktor_nechet">Км. начало</string>
+    <string name="fragment_add_pk_start_redacktor_nechet">Пк. начало</string>
+    <string name="fragment_add_minus_redacktor_nechet">Минус</string>
+    <string name="fragment_add_plus_redacktor_nechet">Плюс</string>
+
+    <!--    Фрагмент Brake ADD для четного-->
+    <string name="fragment_add_km_start_brake_chet">Км. начало</string>
+    <string name="fragment_add_pk_start_brake_chet">Пк. начало</string>
+
+    <!--    Фрагмент Brake ADD для нечетного-->
+    <string name="fragment_add_km_start_brake_nechet">Км. начало</string>
+    <string name="fragment_add_pk_start_brake_nechet">Пк. начало</string>
+
+    <!--    Фрагмент Limitations Update для четного-->
+    <string name="fragment_update_km_start_limitations_chet">Км. начало</string>
+    <string name="fragment_update_pk_start_limitations_chet">Пк. начало</string>
+    <string name="fragment_update_km_finish_limitations_chet">Км. финиш</string>
+    <string name="fragment_update_pk_finish_limitations_chet">Пк. финиш</string>
+    <string name="fragment_update_speed_limitations_chet">Скорость</string>
+
+    <!--    Фрагмент Limitations Update для нечетного-->
+    <string name="fragment_update_km_start_limitations_nechet">Км. начало</string>
+    <string name="fragment_update_pk_start_limitations_nechet">Пк. начало</string>
+    <string name="fragment_update_km_finish_limitations_nechet">Км. финиш</string>
+    <string name="fragment_update_pk_finish_limitations_nechet">Пк. финиш</string>
+    <string name="fragment_update_speed_limitations_nechet">Скорость</string>
+
+    <!--    Фрагмент Pantograph Update для четного-->
+    <string name="fragment_update_km_start_pantograph_chet">Км. начало</string>
+    <string name="fragment_update_pk_start_pantograph_chet">Пк. начало</string>
+
+    <!--    Фрагмент Pantograph Update для нечетного-->
+    <string name="fragment_update_km_start_pantograph_nechet">Км. начало</string>
+    <string name="fragment_update_pk_start_pantograph_nechet">Пк. начало</string>
+
+    <!--    Фрагмент Redacktor Update для четного-->
+    <string name="fragment_update_km_start_redacktor_chet">Км. начало</string>
+    <string name="fragment_update_pk_start_redacktor_chet">Пк. начало</string>
+    <string name="fragment_update_minus_redacktor_chet">Минус</string>
+    <string name="fragment_update_plus_redacktor_chet">Плюс</string>
+
+    <!--    Фрагмент Redacktor Update для нечетного-->
+    <string name="fragment_update_km_start_redacktor_nechet">Км. начало</string>
+    <string name="fragment_update_pk_start_redacktor_nechet">Пк. начало</string>
+    <string name="fragment_update_minus_redacktor_nechet">Минус</string>
+    <string name="fragment_update_plus_redacktor_nechet">Плюс</string>
+
+    <!--    Фрагмент Brake Update для четного-->
+    <string name="fragment_update_km_start_brake_chet">Км. начало</string>
+    <string name="fragment_update_pk_start_brake_chet">Пк. начало</string>
+
+    <!--    Фрагмент Brake Update для нечетного-->
+    <string name="fragment_update_km_start_brake_nechet">Км. начало</string>
+    <string name="fragment_update_pk_start_brake_nechet">Пк. начало</string>
+
+    <!--    Main distance для четного-->
+    <string name="main_distance_km_chet">Введите киллометр</string>
+    <string name="main_distance_usl_chet">Введите условную длину</string>
+    <string name="main_distance_save_chet">Сохранить</string>
+    <string name="main_distance_cancel_chet">Выйти</string>
+
+    <!--    Main distance для нечетного-->
+    <string name="main_distance_km_nechet">Введите киллометр</string>
+    <string name="main_distance_usl_nechet">Введите условную длину</string>
+    <string name="main_distance_save_nechet">Сохранить</string>
+    <string name="main_distance_cancel_nechet">Выйти</string>
+
+    <!--    KM для четного-->
+    <string name="km_chet">КМ</string>
+    <string name="km_15_chet">15</string>
+    <string name="km_25_chet">25</string>
+    <string name="km_40_chet">40</string>
+    <string name="km_50_chet">50</string>
+    <string name="km_55_chet">55</string>
+    <string name="km_60_chet">60</string>
+    <string name="km_65_chet">65</string>
+    <string name="km_70_chet">70</string>
+    <string name="km_75_chet">75</string>
+
+    <!--    KM для нечетного-->
+    <string name="km_nechet">КМ</string>
+    <string name="km_15_nechet">15</string>
+    <string name="km_25_nechet">25</string>
+    <string name="km_40_nechet">40</string>
+    <string name="km_50_nechet">50</string>
+    <string name="km_55_nechet">55</string>
+    <string name="km_60_nechet">60</string>
+    <string name="km_65_nechet">65</string>
+    <string name="km_70_nechet">70</string>
+    <string name="km_75_nechet">75</string>
+
+</resources>

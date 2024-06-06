@@ -1,0 +1,441 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#E8E5E5"
+    tools:context=".fragments.chet.MainFragmentChet">
+
+    <org.osmdroid.views.MapView
+        android:id="@+id/mapChet"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="45dp"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0">
+
+    </org.osmdroid.views.MapView>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fCenterChet"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:clickable="true"
+        android:src="@drawable/is_my_loc_center_chet"
+        app:backgroundTint="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="ContentDescription,SpeakableTextPresentCheck" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fStartStopChet"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:clickable="true"
+        android:src="@drawable/is_play_chet"
+        app:backgroundTint="@color/white"
+        app:layout_constraintEnd_toEndOf="@+id/fCenterChet"
+        app:layout_constraintTop_toBottomOf="@+id/fCenterChet"
+        tools:ignore="ContentDescription,SpeakableTextPresentCheck" />
+
+    <!--    <TextView-->
+    <!--        android:id="@+id/tvTimeChet"-->
+    <!--        android:layout_width="wrap_content"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:layout_marginStart="10dp"-->
+    <!--        android:layout_marginTop="10dp"-->
+    <!--        android:background="#99FFFFFF"-->
+    <!--        android:paddingStart="5dp"-->
+    <!--        android:paddingEnd="5dp"-->
+    <!--        android:text="Время 00:00:00:000"-->
+    <!--        android:textColor="#000000"-->
+    <!--        app:layout_constraintStart_toStartOf="parent"-->
+    <!--        app:layout_constraintTop_toTopOf="parent" />-->
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fStartChetFakt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:clickable="true"
+        android:src="@drawable/is_start_chet_fakt"
+        app:backgroundTint="#FFFFFF"
+        app:layout_constraintEnd_toEndOf="@+id/fStartStopChet"
+        app:layout_constraintStart_toStartOf="@+id/fStartStopChet"
+        app:layout_constraintTop_toBottomOf="@+id/fStartStopChet"
+        tools:ignore="ContentDescription,SpeakableTextPresentCheck" />
+
+    <Button
+        android:id="@+id/mainUslChet"
+        android:layout_width="65dp"
+        android:layout_height="45dp"
+        android:layout_marginTop="15dp"
+        android:backgroundTint="#CC4C07"
+        android:text="Усл."
+        android:textSize="8sp"
+        app:layout_constraintEnd_toEndOf="@+id/fStartChetFakt"
+        app:layout_constraintStart_toStartOf="@+id/fStartChetFakt"
+        app:layout_constraintTop_toBottomOf="@+id/fStartChetFakt" />
+
+    <TextView
+        android:id="@+id/tvSpeedChet"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="15dp"
+        android:textColor="#F81944"
+        android:textSize="20sp"
+        android:textStyle="bold|italic"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@+id/fStartStopChet"
+        app:layout_constraintEnd_toStartOf="@+id/fStartStopChet"
+        app:layout_constraintTop_toTopOf="@+id/fStartStopChet" />
+
+    <TextView
+        android:id="@+id/tvDistanceChet"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:textColor="#000000"
+        android:textSize="20sp"
+        android:textStyle="italic"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@+id/saveMinusChet50"
+        app:layout_constraintStart_toEndOf="@+id/saveMinusChet50"
+        app:layout_constraintTop_toTopOf="@+id/saveMinusChet50"
+        tools:ignore="MissingConstraints" />
+
+    <Button
+        android:id="@+id/mainDistanceChet"
+        android:layout_width="75dp"
+        android:layout_height="55dp"
+        android:layout_marginEnd="5dp"
+        android:backgroundTint="?android:attr/colorMultiSelectHighlight"
+        android:text="@string/km_chet"
+        android:textColor="#000000"
+        android:textSize="15sp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@+id/fCenterChet"
+        app:layout_constraintEnd_toStartOf="@+id/fCenterChet"
+        app:layout_constraintTop_toTopOf="@+id/fCenterChet" />
+
+    <TextView
+        android:id="@+id/idKmChet"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:textColor="#000000"
+        android:textSize="25sp"
+        android:textStyle="bold|italic"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="@+id/fStartStopChet"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/fStartStopChet" />
+
+    <TextView
+        android:id="@+id/tvKmChet"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:fontFamily="@font/amiko_semibold"
+        android:textColor="#000000"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="@+id/idKmChet"
+        app:layout_constraintTop_toBottomOf="@+id/idKmChet" />
+
+    <TextView
+        android:id="@+id/tvKmFakt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:fontFamily="@font/anton"
+        android:textColor="#000000"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@+id/tvKmChet"
+        app:layout_constraintStart_toEndOf="@+id/tvKmChet"
+        app:layout_constraintTop_toTopOf="@+id/tvKmChet" />
+
+    <TextView
+        android:id="@+id/tvOgrChet15"
+        android:layout_width="42dp"
+        android:layout_height="42dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="170dp"
+        android:hint="@string/km_15_chet"
+        android:textColor="@color/tvOgr"
+        android:textColorHint="@color/tvOgrHint"
+        android:textSize="30sp"
+        android:textStyle="bold|italic"
+        app:layout_constraintStart_toStartOf="@+id/mapChet"
+        app:layout_constraintTop_toTopOf="@+id/mapChet"
+        tools:ignore="TextContrastCheck" />
+
+    <TextView
+        android:id="@+id/tvOgrChet25"
+        android:layout_width="42dp"
+        android:layout_height="42dp"
+        android:layout_marginTop="5dp"
+        android:hint="@string/km_25_chet"
+        android:textColor="@color/tvOgr"
+        android:textColorHint="@color/tvOgrHint"
+        android:textSize="30sp"
+        android:textStyle="bold|italic"
+        app:layout_constraintStart_toStartOf="@+id/tvOgrChet15"
+        app:layout_constraintTop_toBottomOf="@+id/tvOgrChet15"
+        tools:ignore="TextContrastCheck" />
+
+    <TextView
+        android:id="@+id/tvOgrChet40"
+        android:layout_width="42dp"
+        android:layout_height="42dp"
+        android:layout_marginTop="5dp"
+        android:hint="@string/km_40_chet"
+        android:textColor="@color/tvOgr"
+        android:textColorHint="@color/tvOgrHint"
+        android:textSize="30sp"
+        android:textStyle="bold|italic"
+        app:layout_constraintStart_toStartOf="@+id/tvOgrChet25"
+        app:layout_constraintTop_toBottomOf="@+id/tvOgrChet25"
+        tools:ignore="TextContrastCheck" />
+
+    <TextView
+        android:id="@+id/tvOgrChet50"
+        android:layout_width="42dp"
+        android:layout_height="42dp"
+        android:layout_marginTop="5dp"
+        android:hint="@string/km_50_chet"
+        android:textColor="@color/tvOgr"
+        android:textColorHint="@color/tvOgrHint"
+        android:textSize="30sp"
+        android:textStyle="bold|italic"
+        app:layout_constraintStart_toStartOf="@+id/tvOgrChet40"
+        app:layout_constraintTop_toBottomOf="@+id/tvOgrChet40"
+        tools:ignore="TextContrastCheck" />
+
+    <TextView
+        android:id="@+id/tvOgrChet55"
+        android:layout_width="42dp"
+        android:layout_height="42dp"
+        android:layout_marginTop="5dp"
+        android:hint="@string/km_55_chet"
+        android:textColor="@color/tvOgr"
+        android:textColorHint="@color/tvOgrHint"
+        android:textSize="30sp"
+        android:textStyle="bold|italic"
+        app:layout_constraintStart_toStartOf="@+id/tvOgrChet50"
+        app:layout_constraintTop_toBottomOf="@+id/tvOgrChet50"
+        tools:ignore="TextContrastCheck" />
+
+    <TextView
+        android:id="@+id/tvOgrChet60"
+        android:layout_width="42dp"
+        android:layout_height="42dp"
+        android:layout_marginTop="5dp"
+        android:hint="@string/km_60_chet"
+        android:textColor="@color/tvOgr"
+        android:textColorHint="@color/tvOgrHint"
+        android:textSize="30sp"
+        android:textStyle="bold|italic"
+        app:layout_constraintStart_toStartOf="@+id/tvOgrChet55"
+        app:layout_constraintTop_toBottomOf="@+id/tvOgrChet55"
+        tools:ignore="TextContrastCheck" />
+
+    <TextView
+        android:id="@+id/tvOgrChet65"
+        android:layout_width="42dp"
+        android:layout_height="42dp"
+        android:layout_marginTop="5dp"
+        android:hint="@string/km_65_chet"
+        android:textColor="@color/tvOgr"
+        android:textColorHint="@color/tvOgrHint"
+        android:textSize="30sp"
+        android:textStyle="bold|italic"
+        app:layout_constraintStart_toStartOf="@+id/tvOgrChet60"
+        app:layout_constraintTop_toBottomOf="@+id/tvOgrChet60"
+        tools:ignore="TextContrastCheck" />
+
+    <TextView
+        android:id="@+id/tvOgrChet70"
+        android:layout_width="42dp"
+        android:layout_height="42dp"
+        android:layout_marginTop="5dp"
+        android:hint="@string/km_70_chet"
+        android:textColor="@color/tvOgr"
+        android:textColorHint="@color/tvOgrHint"
+        android:textSize="30sp"
+        android:textStyle="bold|italic"
+        app:layout_constraintStart_toStartOf="@+id/tvOgrChet65"
+        app:layout_constraintTop_toBottomOf="@+id/tvOgrChet65"
+        tools:ignore="TextContrastCheck" />
+
+    <TextView
+        android:id="@+id/tvOgrChet75"
+        android:layout_width="42dp"
+        android:layout_height="42dp"
+        android:layout_marginTop="5dp"
+        android:hint="@string/km_75_chet"
+        android:textColor="@color/tvOgr"
+        android:textColorHint="@color/tvOgrHint"
+        android:textSize="30sp"
+        android:textStyle="bold|italic"
+        app:layout_constraintStart_toStartOf="@+id/tvOgrChet70"
+        app:layout_constraintTop_toBottomOf="@+id/tvOgrChet70"
+        tools:ignore="TextContrastCheck" />
+
+    <TextView
+        android:id="@+id/tvKmPkChet15"
+        android:layout_width="275dp"
+        android:layout_height="42dp"
+        android:layout_marginStart="10dp"
+        android:elegantTextHeight="true"
+        android:textColor="#000000"
+        android:textSize="20sp"
+        android:textStyle="italic"
+        app:layout_constraintBottom_toBottomOf="@+id/tvOgrChet15"
+        app:layout_constraintStart_toEndOf="@+id/tvOgrChet15"
+        app:layout_constraintTop_toTopOf="@+id/tvOgrChet15" />
+
+    <TextView
+        android:id="@+id/tvKmPkChet25"
+        android:layout_width="275dp"
+        android:layout_height="42dp"
+        android:layout_marginStart="10dp"
+        android:elegantTextHeight="true"
+        android:textColor="#000000"
+        android:textSize="20sp"
+        android:textStyle="italic"
+        app:layout_constraintBottom_toBottomOf="@+id/tvOgrChet25"
+        app:layout_constraintStart_toEndOf="@+id/tvOgrChet25"
+        app:layout_constraintTop_toTopOf="@+id/tvOgrChet25" />
+
+    <TextView
+        android:id="@+id/tvKmPkChet40"
+        android:layout_width="275dp"
+        android:layout_height="42dp"
+        android:layout_marginStart="10dp"
+        android:elegantTextHeight="true"
+        android:textColor="#000000"
+        android:textSize="20sp"
+        android:textStyle="italic"
+        app:layout_constraintBottom_toBottomOf="@+id/tvOgrChet40"
+        app:layout_constraintStart_toEndOf="@+id/tvOgrChet40"
+        app:layout_constraintTop_toTopOf="@+id/tvOgrChet40" />
+
+    <TextView
+        android:id="@+id/tvKmPkChet50"
+        android:layout_width="275dp"
+        android:layout_height="42dp"
+        android:layout_marginStart="10dp"
+        android:elegantTextHeight="true"
+        android:textColor="#000000"
+        android:textSize="20sp"
+        android:textStyle="italic"
+        app:layout_constraintBottom_toBottomOf="@+id/tvOgrChet50"
+        app:layout_constraintStart_toEndOf="@+id/tvOgrChet50"
+        app:layout_constraintTop_toTopOf="@+id/tvOgrChet50" />
+
+    <TextView
+        android:id="@+id/tvKmPkChet55"
+        android:layout_width="275dp"
+        android:layout_height="42dp"
+        android:layout_marginStart="10dp"
+        android:elegantTextHeight="true"
+        android:textColor="#000000"
+        android:textSize="20sp"
+        android:textStyle="italic"
+        app:layout_constraintBottom_toBottomOf="@+id/tvOgrChet55"
+        app:layout_constraintStart_toEndOf="@+id/tvOgrChet55"
+        app:layout_constraintTop_toTopOf="@+id/tvOgrChet55" />
+
+    <TextView
+        android:id="@+id/tvKmPkChet60"
+        android:layout_width="275dp"
+        android:layout_height="42dp"
+        android:layout_marginStart="10dp"
+        android:elegantTextHeight="true"
+        android:textColor="#000000"
+        android:textSize="20sp"
+        android:textStyle="italic"
+        app:layout_constraintBottom_toBottomOf="@+id/tvOgrChet60"
+        app:layout_constraintStart_toEndOf="@+id/tvOgrChet60"
+        app:layout_constraintTop_toTopOf="@+id/tvOgrChet60" />
+
+    <TextView
+        android:id="@+id/tvKmPkChet65"
+        android:layout_width="275dp"
+        android:layout_height="42dp"
+        android:layout_marginStart="10dp"
+        android:elegantTextHeight="true"
+        android:textColor="#000000"
+        android:textSize="20sp"
+        android:textStyle="italic"
+        app:layout_constraintBottom_toBottomOf="@+id/tvOgrChet65"
+        app:layout_constraintStart_toEndOf="@+id/tvOgrChet65"
+        app:layout_constraintTop_toTopOf="@+id/tvOgrChet65" />
+
+    <TextView
+        android:id="@+id/tvKmPkChet70"
+        android:layout_width="275dp"
+        android:layout_height="42dp"
+        android:layout_marginStart="8dp"
+        android:elegantTextHeight="true"
+        android:textColor="#000000"
+        android:textSize="20sp"
+        android:textStyle="italic"
+        app:layout_constraintBottom_toBottomOf="@+id/tvOgrChet70"
+        app:layout_constraintStart_toEndOf="@+id/tvOgrChet70"
+        app:layout_constraintTop_toTopOf="@+id/tvOgrChet70"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/tvKmPkChet75"
+        android:layout_width="275dp"
+        android:layout_height="42dp"
+        android:layout_marginStart="8dp"
+        android:elegantTextHeight="true"
+        android:textColor="#000000"
+        android:textSize="20sp"
+        android:textStyle="italic"
+        app:layout_constraintBottom_toBottomOf="@+id/tvOgrChet75"
+        app:layout_constraintStart_toEndOf="@+id/tvOgrChet75"
+        app:layout_constraintTop_toTopOf="@+id/tvOgrChet75" />
+
+    <ImageButton
+        android:id="@+id/savePlusChet50"
+        android:layout_width="33dp"
+        android:layout_height="33dp"
+        android:layout_marginStart="10dp"
+        android:background="#00FFFFFF"
+        android:backgroundTint="#00FFFFFF"
+        android:src="@drawable/row_arrow_circle_right_chet"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@+id/saveMinusChet50"
+        app:layout_constraintEnd_toStartOf="@+id/mainDistanceChet"
+        app:layout_constraintStart_toEndOf="@+id/tvDistanceChet"
+        app:layout_constraintTop_toTopOf="@+id/saveMinusChet50"
+        tools:ignore="ContentDescription,SpeakableTextPresentCheck,SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+
+    <ImageButton
+        android:id="@+id/saveMinusChet50"
+        android:layout_width="33dp"
+        android:layout_height="33dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="20dp"
+        android:background="#00FFFFFF"
+        android:backgroundTint="#00FFFFFF"
+        android:src="@drawable/row_arrow_circle_left_chet"
+        android:visibility="gone"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="ContentDescription,SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

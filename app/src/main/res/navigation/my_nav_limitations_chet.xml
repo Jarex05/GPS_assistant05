@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/my_nav_limitations_chet"
+    app:startDestination="@id/listLimitationsFragmentChet">
+
+    <fragment
+        android:id="@+id/listLimitationsFragmentChet"
+        android:name="com.mikhail_R_gps_tracker.gpsassistant.fragments.chet.limitation.list.ListLimitationsFragmentChet"
+        android:label="fragment_list_limitations_chet"
+        tools:layout="@layout/fragment_list_limitations_chet" >
+        <action
+            android:id="@+id/action_listLimitationsFragmentChet_to_addLimitationsFragmentChet"
+            app:destination="@id/addLimitationsFragmentChet" />
+        <action
+            android:id="@+id/action_listLimitationsFragmentChet_to_updateLimitationsFragmentChet"
+            app:destination="@id/updateLimitationsFragmentChet" />
+    </fragment>
+    <fragment
+        android:id="@+id/addLimitationsFragmentChet"
+        android:name="com.mikhail_R_gps_tracker.gpsassistant.fragments.chet.limitation.add.AddLimitationsFragmentChet"
+        android:label="fragment_add_limitations_chet"
+        tools:layout="@layout/fragment_add_limitations_chet" >
+        <action
+            android:id="@+id/action_addLimitationsFragmentChet_to_listLimitationsFragmentChet"
+            app:destination="@id/listLimitationsFragmentChet" />
+    </fragment>
+    <fragment
+        android:id="@+id/updateLimitationsFragmentChet"
+        android:name="com.mikhail_R_gps_tracker.gpsassistant.fragments.chet.limitation.update.UpdateLimitationsFragmentChet"
+        android:label="fragment_update_limitations_chet"
+        tools:layout="@layout/fragment_update_limitations_chet" >
+        <action
+            android:id="@+id/action_updateLimitationsFragmentChet_to_listLimitationsFragmentChet"
+            app:destination="@id/listLimitationsFragmentChet" />
+        <argument
+            android:name="item_limitations_chet"
+            app:argType="com.mikhail_R_gps_tracker.gpsassistant.db.limitations.ListItemLimitationsChet" />
+    </fragment>
+</navigation>
